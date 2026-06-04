@@ -74,7 +74,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="eyebrow text-gold"
           >
-            — Welcome to
+            Welcome to
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
