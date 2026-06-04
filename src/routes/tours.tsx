@@ -11,10 +11,10 @@ import { Calendar, MapPin, Camera, Hotel, CheckCircle2, XCircle } from "lucide-r
 export const Route = createFileRoute("/tours")({
   head: () => ({
     meta: [
-      { title: "Sri Lanka Tour Packages — Family, Honeymoon, Wildlife & Luxury" },
-      { name: "description", content: "Curated Sri Lanka tour packages with day-by-day itineraries, handpicked hotels and private chauffeur transport. Fully customisable." },
+      { title: "Sri Lanka Tour Packages — Luxury, Culture & Beach Holidays" },
+      { name: "description", content: "7 and 10-day Sri Lanka tour packages: Sigiriya, Kandy, Ella, Yala, Bentota and the south coast. Luxury and classic options with private transport." },
       { property: "og:title", content: "Sri Lanka Tour Packages — Urban Travels" },
-      { property: "og:description", content: "Family, honeymoon, cultural, wildlife, adventure and luxury tours of Sri Lanka." },
+      { property: "og:description", content: "Luxury, culture and relaxation tours of Sri Lanka from USD 700 per person." },
       { property: "og:url", content: "/tours" },
     ],
     links: [{ rel: "canonical", href: "/tours" }],
