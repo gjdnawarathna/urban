@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
+import { waLink } from "./WhatsAppFloat";
+import { SiteLogo } from "./SiteLogo";
 
 const NAV = [
   { to: "/", label: "Home" },
@@ -37,15 +39,7 @@ export function Header() {
         }`}
         style={scrolled ? { maxWidth: "min(80rem, calc(100% - 1.5rem))" } : undefined}
       >
-        <Link to="/" className="flex items-center gap-2 text-white">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/60">
-            <span className="text-display text-lg text-gold">U</span>
-          </span>
-          <div className="leading-tight">
-            <div className="text-display text-lg tracking-wide">Urban Travels</div>
-            <div className="text-[10px] tracking-[0.3em] text-gold/80">SRI LANKA</div>
-          </div>
-        </Link>
+        <SiteLogo size="md" showTagline />
 
         <nav className="hidden items-center gap-8 lg:flex">
           {NAV.map((n) => (
@@ -63,10 +57,13 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href="tel:+94741450646"
-            className="flex items-center gap-2 text-sm text-white/85 hover:text-gold"
+            href={waLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-full border border-white/40 bg-white/20 px-5 py-2 text-sm font-medium text-white shadow-sm backdrop-blur-sm transition-transform hover:scale-[1.03] hover:border-gold hover:bg-white/30 hover:text-gold"
           >
-            <Phone className="h-4 w-4" /> +94 74 145 0646
+            <MessageCircle className="h-4 w-4 shrink-0" />
+            contact us
           </a>
           <Link
             to="/contact"
@@ -98,10 +95,20 @@ export function Header() {
                 {n.label}
               </Link>
             ))}
+            <a
+              href={waLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 flex items-center justify-center gap-2 rounded-full border border-white/40 bg-white/20 px-5 py-2 text-center text-sm font-medium text-white shadow-sm backdrop-blur-sm"
+            >
+              <MessageCircle className="h-4 w-4" />
+              +94 74 145 0646
+            </a>
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-gold px-5 py-2 text-center text-navy"
+              className="rounded-full bg-gold px-5 py-2 text-center text-navy"
             >
               Plan My Tour
             </Link>

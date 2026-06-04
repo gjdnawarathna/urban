@@ -91,7 +91,7 @@ export function Hero() {
             className="mt-6 max-w-xl text-base leading-relaxed text-white/75 md:text-lg"
           >
             Tailor-made tours, private transport, handpicked hotels and unforgettable
-            experiences — crafted by local experts who call this island home.
+            experiences crafted by local experts who call this island home.
           </motion.p>
 
           <motion.div

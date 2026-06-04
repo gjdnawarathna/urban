@@ -27,7 +27,7 @@ export function FeaturedDestinations() {
     <section className="relative bg-background py-24 md:py-32">
       <SectionHeader
         eyebrow="Featured destinations"
-        title={<>Eight places. <span className="italic">One unforgettable island.</span></>}
+        title={<>Many places. <span className="italic">One unforgettable island.</span></>}
         description="From misty highlands to palm-fringed shores, discover the regions our guests fall in love with."
       />
       <div className="mx-auto mt-16 grid max-w-7xl auto-rows-[300px] gap-5 px-6 md:grid-cols-2 lg:grid-cols-4">

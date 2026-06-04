@@ -1,6 +1,20 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, Facebook, Instagram, Youtube } from "lucide-react";
+import { Mail, MapPin, Phone, Facebook, Instagram } from "lucide-react";
 import { waLink } from "./WhatsAppFloat";
+import { SiteLogo } from "./SiteLogo";
+
+const SOCIAL_LINKS = [
+  {
+    href: "https://www.facebook.com/share/1J5kg9eUAm/",
+    label: "Urban Travels on Facebook",
+    Icon: Facebook,
+  },
+  {
+    href: "https://www.instagram.com/ceylon_urban_travels?igsh=MTA3Ym9udnFlYXkwaw==",
+    label: "Ceylon Urban Travels on Instagram",
+    Icon: Instagram,
+  },
+] as const;
 
 export function Footer() {
   return (
@@ -10,18 +24,20 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 pb-10 pt-20">
         <div className="grid gap-12 lg:grid-cols-4">
           <div>
-            <div className="text-display text-3xl">Urban Travels</div>
-            <div className="eyebrow mt-1 text-gold">Sri Lanka</div>
+            <SiteLogo size="lg" asLink={false} />
+            <div className="eyebrow mt-3 text-gold">Sri Lanka</div>
             <p className="mt-5 max-w-xs text-sm text-white/70">
               Tailor-made tours, private chauffeurs and handpicked stays across the Pearl of the Indian Ocean.
             </p>
             <div className="mt-6 flex gap-3">
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
+              {SOCIAL_LINKS.map(({ href, label, Icon }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 transition-colors hover:border-gold hover:text-gold"
-                  aria-label="social"
+                  aria-label={label}
                 >
                   <Icon className="h-4 w-4" />
                 </a>
