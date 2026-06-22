@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronLeft, ChevronRight, MessageCircle, MapPin } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import heroTrain from "@/assets/hero-train.jpg";
 import mirissa from "@/assets/dest-mirissa.jpg";
 import sigiriya from "@/assets/dest-sigiriya.jpg";
 import colombo from "@/assets/dest-colombo.jpg";
@@ -34,15 +33,22 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden bg-navy-deep text-white">
-      {/* Background image (Ella train, cinematic) */}
-      <div className="absolute inset-0">
-        <img
-          src={heroTrain}
-          alt="Sri Lanka train through tea plantations"
-          width={1920}
-          height={1080}
-          className="h-full w-full object-cover"
-        />
+      {/* Background image updates with the active featured destination */}
+      <div className="absolute inset-0 overflow-hidden">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={active.name}
+            src={active.img}
+            alt={`${active.name} destination`}
+            width={1920}
+            height={1080}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="h-full w-full object-cover"
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/95 via-navy/70 to-navy/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-deep via-transparent to-navy-deep/40" />
       </div>
