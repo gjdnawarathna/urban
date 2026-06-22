@@ -23,7 +23,7 @@ export const Route = createFileRoute("/contact")({
 
 const ITEMS = [
   { Icon: Phone, label: "Phone", value: "+94 74 145 0646", href: "tel:+94741450646" },
-  { Icon: Mail, label: "Email", value: "urbantravel360@gmail.com", href: "mailto:urbantravel360@gmail.com" },
+  { Icon: Mail, label: "Email", value: "ceylonurbantravels@gmail.com", href: "mailto:ceylonurbantravels@gmail.com" },
   { Icon: MessageCircle, label: "WhatsApp", value: "Chat now", href: waLink },
   { Icon: MapPin, label: "Office", value: "Melsiripura, Sri Lanka", href: "#map" },
 ];

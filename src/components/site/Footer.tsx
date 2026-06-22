@@ -60,7 +60,7 @@ export function Footer() {
             <ul className="mt-5 space-y-3 text-sm text-white/75">
               <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 text-gold" />Second Floor, De Mel Shopping Complex, Pallepola Road, Melsiripura, Sri Lanka</li>
               <li><a href="tel:+94741450646" className="flex gap-3 hover:text-gold"><Phone className="h-4 w-4 text-gold" />+94 74 145 0646</a></li>
-              <li><a href="mailto:urbantravel360@gmail.com" className="flex gap-3 hover:text-gold"><Mail className="h-4 w-4 text-gold" />urbantravel360@gmail.com</a></li>
+              <li><a href="mailto:ceylonurbantravels@gmail.com" className="flex gap-3 hover:text-gold"><Mail className="h-4 w-4 text-gold" />ceylonurbantravels@gmail.com</a></li>
               <li>
                 <a href={waLink} target="_blank" rel="noopener noreferrer"
                    className="mt-3 inline-flex items-center gap-2 rounded-full bg-gold px-4 py-2 text-navy hover:scale-[1.03] transition-transform">

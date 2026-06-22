@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         name: "Urban Travels Sri Lanka",
         url: "/",
         telephone: "+94741450646",
-        email: "urbantravel360@gmail.com",
+        email: "ceylonurbantravels@gmail.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Second Floor, De Mel Shopping Complex, Pallepola Road",
